@@ -31,6 +31,9 @@
       <span v-if="!v$.localSong.length.$pending && v$.localSong.length.$invalid" class="error-message">Du brauchst eine Länge!</span>
       <span v-if="localSong.length <= 0 && !v$.localSong.length.$pending" class="error-message">Die Länge muss mindestens 1 Sekunde sein!</span>
 
+      <!-- -----8 ----- Neues Feld für Audiodatei -->
+      <input type="file" @change="handleFileUpload" required />
+      <!--  --------------- -->
 
       <button type="submit">{{ isEdit ? 'Save Changes' : 'Add Song' }}</button>
     </form>
@@ -40,12 +43,17 @@
       {{ message }}
     </div>
 
+    <!-- 8 ------ newAudio -------->
+    <!--<form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="audioFile" accept="audio/*">
+      <button type="submit">Hochladen</button>
+    </form>-->
+
+
     <!-- New Artist Form -->
     <h2>Add New Artist</h2>
     <form @submit.prevent="addArtist">
       <input v-model="newArtistName" placeholder="Artist Name" required />
-      <!--<span v-if="v$.newArtist.name.$pending">Validating...</span>
-      <span v-if="!v$.newArtist.name.$pending && v$.newArtist.name.$invalid" class="error-message">Du brauchst einen Artist Namen!</span>-->
       <span v-if="v$.newArtistName.$pending">Validating...</span>
       <span v-if="!v$.newArtistName.$pending && v$.newArtistName.$invalid" class="error-message">Du brauchst einen Artist Namen!</span>
 
@@ -75,11 +83,6 @@
       </li>
     </ul>
 
-    <!--<div v-if="artistMessage">{{ artistMessage }}</div>
-    <div v-if="message">{{ message }}</div>-->
-
-    <!-- Erfolgs- oder Fehlermeldung -->
-    <!--<div v-if="message">{{ message }}</div>-->
   </div>
 </template>
 
@@ -95,7 +98,9 @@ export default {
   props: {
     song: {
       type: Object,
-      default: () => ({ title: '', artistId: '', genre: '', length: 0 })
+      default: () => ({ title: '', artistId: '', genre: '', length: 0 }),
+      audioFile: null, // ---8 --- Neue Variable für die Audiodatei ---
+      message: ''
     },
     isEdit: Boolean
   },
@@ -116,21 +121,26 @@ export default {
         length: { required, min: minLength(1) },
         artistId: { required }
       },
-      /*newArtist: { // Objekt für den Künstler
-        name: { required, minLength: minLength(1) }
-      }*/
       newArtistName: { required, minLength: minLength(1) },
 
     },
         {
-          localSong, /*newArtist: { name:*/
-          newArtistName/*}*/
+          localSong,
+          newArtistName
         }
     );
 
-    console.log('newArtistName', newArtistName);
-    console.log('v$ object:', v$);
-    //console.log('newArtistName validation:', v$.newArtistName);
+    //------- 8 ------
+    const handleFileUpload = (event) => {
+      const file = event.target.files[0];
+      // MIME-Typ-Überprüfung im Frontend
+      if (!file.type.startsWith("audio/")) {
+        message.value = "Please upload a valid audio file!";
+        return;
+      }
+      localSong.value.audioFile = file;
+    };
+
 
     const fetchArtists = async () => {
       try {
@@ -142,52 +152,53 @@ export default {
     };
 
     const addArtist = async () => {
-      // console.log('Is newArtistName valid?', v$.newArtistName.$invalid);
-      // if (v$.newArtistName.$invalid) {
-      //   artistMessage.value = 'Please provide a valid artist name!';
-      //   return;
-      // }
-      console.log("test")
       try {
         const response = await axios.post('http://localhost:8082/api/artists', { name: newArtistName.value });
-        console.log('newArtistName.value: ', newArtistName.value);
         artistMessage.value = 'Artist added successfully!';
         newArtistName.value = ''; // Reset the input field
         await fetchArtists();
         localSong.value.artistId = response.data.id;
       } catch (error) {
         artistMessage.value = 'Error adding artist:' + error.response.data.name ;
-        console.log('Error adding artist:', error.response ? error.response.data : error.message);
       }
     };
 
-
+    // --------- 8 --------
     const submitSong = async () => {
       if (v$.$invalid) {
         message.value = 'Please fill in all required fields correctly!';
         return;
       }
+
+      const formData = new FormData();
+      formData.append('title', localSong.value.title);
+      formData.append('artistId', localSong.value.artistId);
+      formData.append('genre', localSong.value.genre);
+      formData.append('length', localSong.value.length);
+
+      // Nur wenn ein neues Audio-File hochgeladen wird, wird es gesendet
+      if (localSong.value.audioFile) {
+        formData.append('audioFile', localSong.value.audioFile);
+      }
+
       try {
         if (props.isEdit) {
-          if (!localSong.value.id) throw new Error('Song ID is missing.');
-          await axios.put(`http://localhost:8082/api/songs/${localSong.value.id}`, localSong.value);
+          await axios.put(`http://localhost:8082/api/songs/${localSong.value.id}`, formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+          });
         } else {
-          await axios.post('http://localhost:8082/api/songs', localSong.value);
+          await axios.post('http://localhost:8082/api/songs/upload', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+          });
         }
         message.value = 'Song saved successfully!';
         emit('refreshSongs');
         emit('closeEditor');
       } catch (error) {
-        // Wenn der Server eine Fehlerantwort sendet
-        if (error.response && error.response.data) {
-          // Fehlermeldungen vom Server anzeigen (falls sie als Liste vorliegen)
-          message.value = error.response.data.errors ? error.response.data.errors.join(', ') : 'Error saving song: ' + error.response.data.error;
-        } else {
-          message.value = 'Error saving song: ' + (error.message || 'Unknown error');
-        }
-        console.error('Error saving song:', error.response ? error.response.data : error.message);
+        message.value = 'Error saving song: ' + error.message;
       }
     };
+
 
 
     const enterEditMode = (artist) => {
@@ -240,7 +251,8 @@ export default {
       enterEditMode,
       saveArtistEdit,
       cancelEdit,
-      deleteArtist
+      deleteArtist,
+      handleFileUpload //--------8 --------
     };
   }
 };

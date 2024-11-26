@@ -1,0 +1,111 @@
+/* Grundlegende Stile für die ganze Seite */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1e3dd; /* Cremefarben als Hintergrund */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Titel der Anwendung */
+h1 {
+    color: #667292; /* Graublauer Farbton für den Titel */
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Suchfeld-Stile */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bccad6; /* Heller Blauton für den Rand */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f1e3dd; /* Heller Hintergrund passend zur Seite */
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8d9db6; /* Dunklerer Blauton für den Button-Hintergrund */
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #667292; /* Graublauer Farbton beim Hover-Effekt */
+}
+
+/* Song-Komponente */
+.song {
+    background-color: #bccad6; /* Heller Blauton für die Song-Komponente */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.song:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile für den Editor */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #bccad6; /* Gleicher Blauton für den Editor-Hintergrund */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8d9db6; /* Dunklerer Blauton für die Eingabefelder */
+    border-radius: 4px;
+    background-color: #f1e3dd; /* Heller Hintergrund für die Eingabefelder */
+}
+
+button[type="submit"] {
+    background-color: #667292; /* Graublauer Farbton für den Submit-Button */
+}
+
+button[type="submit"]:hover {
+    background-color: #8d9db6; /* Dunklerer Blauton beim Hover-Effekt */
+}
+
+button:disabled {
+    background-color: #ccc; /* Grau als Hintergrundfarbe */
+    color: #666; /* Hellgrau als Textfarbe */
+    cursor: not-allowed; /* Zeigt an, dass die Schaltfläche nicht klickbar ist */
+}
+
+/* Fehlermeldungen und Erfolgsmeldungen */
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #e74c3c; /* Rot für Fehler */
+}
+
+/* Fehlernachricht Stil */
+.error-message {
+    color: red;           /* Rote Farbe für Fehler */
+    font-size: 0.9em;      /* Kleinere Schriftgröße */
+    margin-bottom: 0.5em;
+}
+
+/* Optional: Ein kleinerer Text für Validierungsstatus */
+.validation-status {
+    font-size: 0.8em;
+    color: gray;           /* Grau für Validierungsstatus */
+}

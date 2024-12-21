@@ -1,6 +1,5 @@
 <template>
   <!-- 7 ------ Validierung auf der Client-Seite ----->
-
   <div>
     <!-- Song Editor Form -->
     <h2>{{ isEdit ? 'Edit Song' : 'Create a New Song' }}</h2>
@@ -92,15 +91,12 @@ import axios from 'axios';
 import { required, minLength } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 import { ref, onMounted } from 'vue';
-//import { ref, onMounted, watch } from 'vue';
 
 export default {
   props: {
     song: {
       type: Object,
-      default: () => ({ title: '', artistId: '', genre: '', length: 0 }),
-      audioFile: null, // ---8 --- Neue Variable für die Audiodatei ---
-      message: ''
+      default: () => ({ title: '', artistId: '', genre: '', length: 0, audioFile: null }),
     },
     isEdit: Boolean
   },
@@ -252,7 +248,7 @@ export default {
       saveArtistEdit,
       cancelEdit,
       deleteArtist,
-      handleFileUpload //--------8 --------
+      handleFileUpload //--------8 -------- Datei-Upload
     };
   }
 };

@@ -4,28 +4,36 @@
     <p>Artist: {{ song.artist ? song.artist.name : 'Unknown' }}</p>
     <p>Genre: {{ song.genre }}</p>
     <p>Length: {{ song.length }} seconds</p>
-
+ddddddd
     <!--  8-------->
     <!-- Audio-Komponente, die auf den geladenen Audio-Blob zugreift -->
     <audio v-if="audioUrl" :src="audioUrl" controls></audio>
 
+    <button @click="playSong">{{ isPlaying ? 'Pause' : 'Play' }}AAAA</button>
+sdfsfdsf
     <button @click="$emit('edit')">Edit</button>
     <button @click="$emit('delete')">Delete</button>
   </div>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted  } from 'vue';
 import axios from 'axios';
 //----------8 ----------
 export default {
   props: {
-    song: Object
+    song: Object,
+    globalAudioPlayer: {
+      type: Object,
+      required: true
+    }
   },
   setup(props) {
     const audioUrl = ref(null);
+    const isPlaying = ref(false);
+    let audio = null;
 
-    // Funktion zum Laden der Audiodatei von der API
+    // Funktion -> Laden der Audiodatei von der API
     const loadAudio = async (songId) => {
       try {
         const response = await axios.get(`http://localhost:8082/api/songs/${songId}/audio`, {
@@ -38,23 +46,54 @@ export default {
       }
     };
 
+    const playSong = () => {
+      console.log("song is playing");
+      if (!audioUrl.value) return;
 
-    // Audiodatei laden, wenn der Component geladen wird
-    onMounted(() => {
-      if (props.song && props.song.id) {
-        loadAudio(props.song.id);  // Lädt die Audiodaten beim Laden der Komponente
+      // Wenn ein anderes Audio läuft, stoppe es
+      if (props.globalAudioPlayer.audio && props.globalAudioPlayer.audio !== audio) {
+        console.log("eine andere audio läuft jetzt");
+        props.globalAudioPlayer.audio.pause(); // Pause das andere Audio
+        props.globalAudioPlayer.audio.currentTime = 0; // Setze die Zeit zurück
+        props.globalAudioPlayer.isPlaying = false; // Setze den globalen Zustand zurück
       }
 
-      // Wenn im Editiermodus, dann das Audio auch laden
-      if (props.isEdit && props.song.audioData) {
-        audioUrl.value = URL.createObjectURL(new Blob([new Uint8Array(atob(props.song.audioData).split("").map(function(c) { return c.charCodeAt(0); }))]));
+      // Audio Instanz erstellen, falls nicht bereits vorhanden
+      if (!audio) {
+        audio = new Audio(audioUrl.value);
+        audio.onended = () => {
+          props.globalAudioPlayer.isPlaying = false; // Audio ist zu Ende
+          isPlaying.value = false; // Setze den Status auf 'nicht spielen'
+        };
+      }
+      // Wiedergabe oder Pause
+      if (isPlaying.value) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+
+      // Setze den globalen Zustand
+      props.globalAudioPlayer.audio = audio;
+      props.globalAudioPlayer.isPlaying = !isPlaying.value;
+      isPlaying.value = !isPlaying.value;
+    };
+
+
+    onMounted(() => {
+      loadAudio(props.song.id);
+    });
+
+    onUnmounted(() => {
+      if (audioUrl.value) {
+        URL.revokeObjectURL(audioUrl.value);
       }
     });
 
 
-
     return {
-      audioUrl
+      isPlaying,
+      playSong
     };
   }
 };

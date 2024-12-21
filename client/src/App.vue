@@ -7,9 +7,11 @@
         v-for="song in songs"
         :key="song.id"
         :song="song"
-        @edit="editSong(song)"
-        @delete="deleteSong(song.id)"
+        :globalAudioPlayer="globalAudioPlayer"
+    @edit="editSong(song)"
+    @delete="deleteSong(song.id)"
     />
+
 
     <p v-if="songs.length === 0">No songs can be found. Please adjust your search.</p>
 
@@ -56,6 +58,10 @@ export default {
       totalPages: 0,
       isLoading: false,
       showError: false,
+      globalAudioPlayer: {
+        audio: null,
+        isPlaying: false
+      },
     };
   },
   mounted() {
@@ -162,6 +168,10 @@ export default {
       this.editorVisible = false; // Editor ausblenden
       this.currentSong = { title: '', artist: '', genre: '', length: 0 }; // Felder leeren
     },
+    // globaler Audio-Players
+    updateGlobalAudioPlayer(newAudioPlayer) {
+      this.globalAudioPlayer = newAudioPlayer;
+    }
   }
 };
 </script>

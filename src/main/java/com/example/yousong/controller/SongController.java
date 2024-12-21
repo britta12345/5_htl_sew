@@ -3,6 +3,7 @@ package com.example.yousong.controller;
 import com.example.yousong.exception.ResourceNotFoundException;
 import com.example.yousong.model.Artist;
 import com.example.yousong.model.Song;
+import com.example.yousong.projection.SongProjection;
 import com.example.yousong.repository.ArtistRepository;
 import com.example.yousong.repository.SongRepository;
 import jakarta.validation.Valid;
@@ -36,10 +37,10 @@ public class SongController {
         this.artistRepository = artistRepository;
     }
 
-    //----- 8 -------
+    //----- 8 -------!!!!
         // Methode zum Hochladen eines Songs mit Audiodatei
     @PostMapping(value = "/api/songs/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<Song> uploadSong(
+    public ResponseEntity<Song> uploadSong( //konvertiert Datei in Base64 und speichert diese im Song-Objekt
             @RequestParam("title") String title,
             @RequestParam("artistId") Long artistId,
             @RequestParam("genre") String genre,
@@ -74,12 +75,22 @@ public class SongController {
         }
     }
 
+    //Daten aus Repository mit Projection abrufen und an Client senden
+    @GetMapping("/api/songs/projection")
+    public ResponseEntity<Page<SongProjection>> getAllSongsProjection(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<SongProjection> songs = songRepository.findAllProjectedBy(pageable);
+        return ResponseEntity.ok(songs);
+    }
+
 
     @GetMapping("/api/songs/{id}")
     public ResponseEntity<Song> getSongById(@PathVariable Long id) {
         return songRepository.findById(id)
                 .map(song -> {
-                    song.setAudioData(null); // Entfernt Audiodaten aus der Antwort
+                    song.setAudioData(null); // Entfernt die Audiodaten aus der Antwort
                     return ResponseEntity.ok(song);
                 })
                 .orElse(ResponseEntity.notFound().build());
@@ -87,33 +98,29 @@ public class SongController {
 
     // Hinzufügen einer Methode, um nur Audiodaten zu erhalten
     @GetMapping(value = "/api/songs/{id}/audio", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
-    public ResponseEntity<byte[]> getSongAudio(@PathVariable Long id) {
+    public ResponseEntity<?> getSongAudio(@PathVariable Long id) {
         return songRepository.findById(id)
                 .map(song -> {
+                    if (song.getAudioData() == null) {
+                        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+                    }
+
                     byte[] audioData = Base64.getDecoder().decode(song.getAudioData());  // Decode Base64
                     return ResponseEntity.ok(audioData);  // Gebe die Audiodaten als byte[] zurück
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    //-----------
-
 
     @GetMapping("/api/songs")
-    public ResponseEntity<Page<Song>> getAllSongs(
-            // Liest Seitenparameter aus der Anfrage
-            // kein Wert angegeben ->  Seite auf 0 (die erste Seite) gesetzt
+    public ResponseEntity<Page<SongProjection>> getAllSongs(
             @RequestParam(defaultValue = "0") int page,
-            // Liest Anzahl der Songs pro Seite -> Standardmäßig 5
             @RequestParam(defaultValue = "5") int size) {
-        // Pageable-Objekt wird erstellt (aktuelle Seite + Anzahl der Elemente pro Seite)
         Pageable pageable = PageRequest.of(page, size);
-        // mit Pageable-Objekt (Songs von der Datenbank abgerufen)
-        // Rückgabe = Page<Song>  enthält (aktuellen Songs/Paginierungsinformationen)
-        Page<Song> songs = songRepository.findAll(pageable);
-        // Gibt Seite mit Songs zurück (verpackt in ein ResponseEntity) -> enthält (HTTP-Status + Daten)
+        Page<SongProjection> songs = songRepository.findAllProjectedBy(pageable);
         return ResponseEntity.ok(songs);
     }
+
 
     //----neue Songs erstellen----
     // CREATE
@@ -128,61 +135,71 @@ public class SongController {
 
     //----vorhandene Songs bearbeiten----
     // UPDATE ---hier was ändern
-    @PutMapping(value ="/api/songs/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<Song> updateSong(
+    @PutMapping(value = "/api/songs/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<?> updateSong(
             @PathVariable Long id,
             @RequestParam("title") String title,
             @RequestParam("artistId") Long artistId,
             @RequestParam("genre") String genre,
             @RequestParam("length") int length,
-            @RequestParam("audioFile") MultipartFile audioFile) {
-            //@RequestBody Song updatedSong
+            @RequestParam(/*value = */"audioFile"/*, required = true*/) MultipartFile audioFile) {
 
-        System.out.println("Received PUT request to update song with ID: " + id);
+        System.out.println("Gerade wrude eiene audio bearbeitet");
 
-        // Prüfen, ob ID korrekt übergeben wurde
-        if (id == null) {
-            System.out.println("Error: Song ID is missing in the request.");
-            return ResponseEntity.badRequest().build();
+        Logger logger = LoggerFactory.getLogger(SongController.class);
+
+        try {
+            // Song suchen
+            Song song = songRepository.findById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("Song not found with ID: " + id));
+
+            // Song-Daten aktualisieren
+            song.setTitle(title);
+            song.setGenre(genre);
+            song.setLength(length);
+
+            // Künstler setzen
+            Artist artist = artistRepository.findById(artistId)
+                    .orElseThrow(() -> new ResourceNotFoundException("Artist not found with ID: " + artistId));
+            song.setArtist(artist);
+
+            // Audiodatei aktualisieren (falls übergeben)
+            if (audioFile != null && !audioFile.isEmpty()) {
+                // MIME-Typ überprüfen
+                String contentType = audioFile.getContentType();
+                if (contentType == null || !contentType.startsWith("audio/")) {
+                    return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
+                            .body("Unsupported file type. Please upload an audio file.");
+                }
+
+                // Datei in Base64-String umwandeln und speichern
+                byte[] audioDataBytes = audioFile.getBytes();
+                String audioDataBase64 = Base64.getEncoder().encodeToString(audioDataBytes);
+
+                logger.info("audioDataBase64" + audioDataBase64);
+
+                song.setAudioData(audioDataBase64);
+            } else {
+                // Keine neue Datei: Behalte die vorhandenen Audiodaten
+                if (song.getAudioData() == null || song.getAudioData().isEmpty()) {
+                    logger.warn("No audio file provided and no existing audio data found.");
+                } else {
+                    logger.info("No new audio file provided. Existing audio data will remain unchanged.");
+                }
+            }
+
+            // Song speichern
+            songRepository.save(song);
+            return ResponseEntity.ok(song);
+
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error processing the audio file: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
-
-        return songRepository.findById(id)
-                .map(song -> {
-                    // Titel, Künstler, Genre und Länge aktualisieren
-                   song.setTitle(title);
-
-                    Artist artist = artistRepository.findById(artistId)
-                                    .orElseThrow(() -> new ResourceNotFoundException("Artist not found"));
-                    song.setArtist(artist);
-                    song.setGenre(genre);
-                    song.setLength(length);
-
-                    // Prüfen, ob Audiodaten im updatedSong übergeben wurden
-                    if (audioFile != null && !audioFile.isEmpty()) {
-                        try {
-                            String contentType = audioFile.getContentType();
-                            if (!contentType.startsWith("audio/")) {
-                                return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE).build();
-                            }
-
-                            //datei in base 64 string umwandeln
-                           // byte[] audioDataBytes = audioFile.getBytes();
-                            String audioDataBase64 = ""; //Base64.getEncoder().encodeToString(audioDataBytes);
-                            song.setAudioData(audioDataBase64);
-                        }
-                        catch (IOException e){
-                            e.printStackTrace();
-                            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-                        }
-                    }
-
-                    // Speichern der Änderungen
-                   songRepository.save(song);
-
-                    return ResponseEntity.ok(song);
-                })
-                .orElse(ResponseEntity.notFound().build());
     }
+
 
 
     //----Löschen von Songs----
@@ -198,24 +215,17 @@ public class SongController {
     }
 
     //---04--Neuer Endpunkt für die Suche nach Songs----
-    @GetMapping("/search")
-    public ResponseEntity<List<Song>> searchSongs(@RequestParam(required = false) String query) {
-        Logger logger = LoggerFactory.getLogger(getClass());
-
-        // Log die Suchparameter
-        logger.debug("Searching for songs with title: {} and artist name: {}", query);
-
-        try {
-            List<Song> result;
-
-            result = songRepository.findByTitleContainingIgnoreCaseOrArtistNameContainingIgnoreCase(query, query);
-
-            logger.debug("Number of songs found: {}", result.size());
-            return ResponseEntity.ok(result);
-        } catch (Exception e) {
-            logger.error("Error occurred while searching for songs", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+    @GetMapping("/api/songs/search")
+    public ResponseEntity<List<SongProjection>> searchSongs(@RequestParam(required = false) String query) {
+        if (query == null || query.isBlank()) {
+            return ResponseEntity.badRequest().body(null);
         }
+
+        // Suche nach Titel oder Künstler mit Projections
+        List<SongProjection> result = songRepository
+                .findProjectedByTitleContainingIgnoreCaseOrArtist_NameContainingIgnoreCase(query, query);
+
+        return ResponseEntity.ok(result);
     }
 
 }

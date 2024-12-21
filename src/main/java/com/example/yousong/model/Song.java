@@ -43,7 +43,7 @@ public class Song {
         this.audioData = audioData;
     }
 
-    //----- 8 -------
+    //----- 8 ------- Musikdaten werden in der Datenbank gespeichert
     public String getAudioData() {
         return audioData;
     }

@@ -17,18 +17,26 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import axios from 'axios';
 import { globalAudioPlayer } from '../globalAudioPlayer.js'; // Importiere den globalen Audio-Player
 
 export default {
   props: {
-    song: Object
+    song: Object,
   },
 
   setup(props) {
     const audioUrl = ref(null);
     const isPlaying = ref(false);
+
+    // Beobachte den globalen Zustand und aktualisiere die lokale Anzeige
+    watch(
+        () => globalAudioPlayer.currentSongId,
+        (newId) => {
+          isPlaying.value = newId === props.song.id && globalAudioPlayer.isPlaying;
+        }
+    );
 
     // Lädt den Song und das Audio, wenn die Komponente geladen wird
     onMounted(() => {
@@ -43,9 +51,9 @@ export default {
         const response = await axios.get(`http://localhost:8082/api/songs/${songId}/audio`, {
           responseType: 'blob',
         });
-        audioUrl.value = URL.createObjectURL(response.data);  // Blob URL für den Audio-Player
+        audioUrl.value = URL.createObjectURL(response.data); // Blob URL für den Audio-Player
       } catch (error) {
-        console.error("Error loading audio:", error);
+        console.error('Error loading audio:', error);
       }
     };
 
@@ -54,57 +62,45 @@ export default {
       if (!audioUrl.value) return; // Wenn keine URL für das Audio existiert, breche ab
 
       // Wenn der globale Player ein anderes Audio abspielt, stoppen
-      if (globalAudioPlayer.audio && globalAudioPlayer.audio !== audioUrl.value) {
-        console.log("button klick aber andere audio läuft schon!");
-        // Stoppe das aktuell laufende Audio und setze den Buttonzustand auf "Play"
+      if (globalAudioPlayer.audio && globalAudioPlayer.audio.src !== audioUrl.value) {
         globalAudioPlayer.audio.pause();
         globalAudioPlayer.audio.currentTime = 0;
         globalAudioPlayer.isPlaying = false;
-
-        // Setze den Buttonzustand des vorherigen Songs auf "Play"
-        globalAudioPlayer.previousSong.isPlaying = false;
-        globalAudioPlayer.previousSong.buttonText = "Play"; // Button zurücksetzen
       }
 
-      // Wenn noch kein Audio vorhanden ist oder der Song geändert wurde, lade die neue URL
+      // Wenn ein neuer Song abgespielt wird, initialisiere den Audio-Player
       if (!globalAudioPlayer.audio || globalAudioPlayer.audio.src !== audioUrl.value) {
-        // Stelle sicher, dass der alte Player gestoppt wurde, bevor ein neuer Player erstellt wird
-        if (globalAudioPlayer.audio) {
-          globalAudioPlayer.audio.pause();
-          globalAudioPlayer.audio.currentTime = 0;
-        }
-
         globalAudioPlayer.audio = new Audio(audioUrl.value);
         globalAudioPlayer.audio.onended = () => {
-          isPlaying.value = false; // Stoppe den Song, wenn er zu Ende ist
-          globalAudioPlayer.isPlaying = false;
+          globalAudioPlayer.isPlaying = false; // Wenn der Song endet, setze Zustand zurück
+          globalAudioPlayer.currentSongId = null;
+          isPlaying.value = false;
         };
       }
 
-      // Starte oder pausiere den Song je nach aktuellem Zustand
+      // Umschalten zwischen Play und Pause
       if (isPlaying.value) {
+        // Song pausieren
         globalAudioPlayer.audio.pause();
+        globalAudioPlayer.isPlaying = false;
+        isPlaying.value = false;
       } else {
+        // Song abspielen
         globalAudioPlayer.audio.play();
+        globalAudioPlayer.isPlaying = true;
+        isPlaying.value = true;
+
+        // Setze den aktuellen Song im globalen Zustand
+        globalAudioPlayer.currentSongId = props.song.id;
       }
-
-      // Setze den globalen Zustand für das aktuelle Audio und den Button
-      globalAudioPlayer.isPlaying = !isPlaying.value;
-      isPlaying.value = !isPlaying.value;
-
-      // Markiere diesen Song als aktuell abgespielt
-      globalAudioPlayer.previousSong = {
-        id: props.song.id,
-        isPlaying: true,
-        buttonText: "Pause",  // Setze den Buttontext für den aktuellen Song auf "Pause"
-      };
     };
+
 
     return {
       audioUrl,
       isPlaying,
       playSong,
     };
-  }
+  },
 };
 </script>

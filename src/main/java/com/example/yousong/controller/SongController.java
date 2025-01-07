@@ -13,7 +13,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.dao.OptimisticLockingFailureException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +41,7 @@ public class SongController {
 
     //----- 8 -------!!!!
         // Methode zum Hochladen eines Songs mit Audiodatei
+    @PreAuthorize("isAuthenticated()") //------- 9
     @PostMapping(value = "/api/songs/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Song> uploadSong( //konvertiert Datei in Base64 und speichert diese im Song-Objekt
             @RequestParam("title") String title,
@@ -76,6 +79,7 @@ public class SongController {
     }
 
     //Daten aus Repository mit Projection abrufen und an Client senden
+    @PreAuthorize("isAuthenticated()") //------- 9
     @GetMapping("/api/songs/projection")
     public ResponseEntity<Page<SongProjection>> getAllSongsProjection(
             @RequestParam(defaultValue = "0") int page,
@@ -86,6 +90,7 @@ public class SongController {
     }
 
 
+    @PreAuthorize("isAuthenticated()") //------- 9
     @GetMapping("/api/songs/{id}")
     public ResponseEntity<Song> getSongById(@PathVariable Long id) {
         return songRepository.findById(id)
@@ -124,6 +129,7 @@ public class SongController {
 
     //----neue Songs erstellen----
     // CREATE
+    @PreAuthorize("isAuthenticated()") //------- 9
     @PostMapping("/api/songs")
     public ResponseEntity<Song> createSong(@Valid @RequestBody Song song) {
         if (song.getArtist() == null || song.getArtist().getId() == null) {
@@ -134,7 +140,8 @@ public class SongController {
 
 
     //----vorhandene Songs bearbeiten----
-    // UPDATE ---hier was ändern
+    // UPDATE --- Methode zum Aktualisieren eines Songs
+    @PreAuthorize("isAuthenticated()") //------- 9
     @PutMapping(value = "/api/songs/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> updateSong(
             @PathVariable Long id,
@@ -142,16 +149,19 @@ public class SongController {
             @RequestParam("artistId") Long artistId,
             @RequestParam("genre") String genre,
             @RequestParam("length") int length,
-            @RequestParam(/*value = */"audioFile"/*, required = true*/) MultipartFile audioFile) {
-
-        System.out.println("Gerade wrude eiene audio bearbeitet");
-
-        Logger logger = LoggerFactory.getLogger(SongController.class);
+            @RequestParam(value = "audioFile", required = false) MultipartFile audioFile,
+            @RequestParam("version") Integer version) {  // Version wird im Request erwartet
 
         try {
             // Song suchen
             Song song = songRepository.findById(id)
                     .orElseThrow(() -> new ResourceNotFoundException("Song not found with ID: " + id));
+
+            // Version prüfen
+            if (!song.getVersion().equals(version)) {
+                return ResponseEntity.status(HttpStatus.CONFLICT)
+                        .body("Version mismatch. The song has been updated by another user.");
+            }
 
             // Song-Daten aktualisieren
             song.setTitle(title);
@@ -165,33 +175,24 @@ public class SongController {
 
             // Audiodatei aktualisieren (falls übergeben)
             if (audioFile != null && !audioFile.isEmpty()) {
-                // MIME-Typ überprüfen
                 String contentType = audioFile.getContentType();
                 if (contentType == null || !contentType.startsWith("audio/")) {
                     return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
                             .body("Unsupported file type. Please upload an audio file.");
                 }
 
-                // Datei in Base64-String umwandeln und speichern
                 byte[] audioDataBytes = audioFile.getBytes();
                 String audioDataBase64 = Base64.getEncoder().encodeToString(audioDataBytes);
-
-                logger.info("audioDataBase64" + audioDataBase64);
-
                 song.setAudioData(audioDataBase64);
-            } else {
-                // Keine neue Datei: Behalte die vorhandenen Audiodaten
-                if (song.getAudioData() == null || song.getAudioData().isEmpty()) {
-                    logger.warn("No audio file provided and no existing audio data found.");
-                } else {
-                    logger.info("No new audio file provided. Existing audio data will remain unchanged.");
-                }
             }
 
             // Song speichern
             songRepository.save(song);
             return ResponseEntity.ok(song);
 
+        } catch (OptimisticLockingFailureException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("Optimistic locking failure. The song has been updated by another user.");
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error processing the audio file: " + e.getMessage());
@@ -200,10 +201,9 @@ public class SongController {
         }
     }
 
-
-
     //----Löschen von Songs----
     // DELETE
+    @PreAuthorize("isAuthenticated()") //------- 9
     @DeleteMapping("/api/songs/{id}")
     public ResponseEntity<Void> deleteSong(@PathVariable Long id) {
         if (songRepository.existsById(id)) {

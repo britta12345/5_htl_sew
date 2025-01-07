@@ -28,6 +28,20 @@ public class Song {
     @Min(value = 1, message = "Length must be at least 1 second")
     private int length;
 
+    //------ 9 ------
+    //automatisch von Spring Data JPA verwaltet und verwendet, um Versionskonflikte zu erkennen
+    @Version
+    private Integer version;
+
+    // Getter und Setter
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     //----- 8 -------
     @Lob
     private String audioData;  //Feld für die Audiodaten (Datenbank)

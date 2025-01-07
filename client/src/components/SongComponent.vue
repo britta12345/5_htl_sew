@@ -10,7 +10,6 @@
 
     <!-- Button für Play/Pause -->
     <button @click="playSong">{{ isPlaying ? 'Pause' : 'Play' }}</button>
-
     <button @click="$emit('edit')">Edit</button>
     <button @click="$emit('delete')">Delete</button>
   </div>

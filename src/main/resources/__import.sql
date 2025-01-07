@@ -1,4 +1,4 @@
-/*
+
 CREATE TABLE IF NOT EXISTS artist (id BIGINT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL
 );
 
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS song (
                                     length INT,
                                     FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE
 );
-*/
+
 
 
 INSERT INTO artist (name) VALUES ('Britta Reinwart');

@@ -33,8 +33,14 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+        <!-- 10 -->
+        <!-- Spring Security für Authentifizierung und Autorisierung -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- Spring Boot Web Starter -->
-        <!--für die Entwicklung einer Webanwendung mit Spring Boot erforderlich-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -45,6 +51,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <!-- Entferne JUnit 4, damit JUnit 5 verwendet wird -->
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Spring Data JPA -->
@@ -60,14 +73,13 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Dependency Aufgabe 7 !! -->
+        <!-- Spring Boot Starter Validation -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-
-
     </dependencies>
+
 
     <!-- enthält Konfigurationen für den Build-Prozess der Anwendung.-->
     <build>

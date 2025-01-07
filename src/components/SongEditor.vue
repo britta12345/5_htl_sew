@@ -42,13 +42,6 @@
       {{ message }}
     </div>
 
-    <!-- 8 ------ newAudio -------->
-    <!--<form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="audioFile" accept="audio/*">
-      <button type="submit">Hochladen</button>
-    </form>-->
-
-
     <!-- New Artist Form -->
     <h2>Add New Artist</h2>
     <form @submit.prevent="addArtist">
@@ -96,7 +89,14 @@ export default {
   props: {
     song: {
       type: Object,
-      default: () => ({ title: '', artistId: '', genre: '', length: 0, audioFile: null }),
+      default: () => ({
+        title: '',
+        artistId: '',
+        genre: '',
+        length: 0,
+        audioFile: null,
+        version: null, // ----9---- Neue Eigenschaft für die Version
+      }),
     },
     isEdit: Boolean
   },

@@ -43,13 +43,6 @@
       {{ message }}
     </div>
 
-    <!-- 8 ------ newAudio -------->
-    <!--<form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="audioFile" accept="audio/*">
-      <button type="submit">Hochladen</button>
-    </form>-->
-
-
     <!-- New Artist Form -->
     <h2>Add New Artist</h2>
     <form @submit.prevent="addArtist">

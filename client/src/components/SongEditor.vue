@@ -1,5 +1,5 @@
 <template>
-  <!-- 7 ------ Validierung auf der Client-Seite ----->
+  <!-- 7 ------ Validierung auf der Client-Seitee ----->
 
   <div>
     <!-- Song Editor Form -->
@@ -177,11 +177,13 @@ export default {
       try {
         if (props.isEdit) {
           await axios.put(`http://localhost:8082/api/songs/${localSong.value.id}`, formData, {
-            headers: { 'Content-Type': 'multipart/form-data' }
+            headers: { 'Content-Type': 'multipart/form-data' },
+            //withCredentials: true
           });
         } else {
           await axios.post('http://localhost:8082/api/songs/upload', formData, {
-            headers: { 'Content-Type': 'multipart/form-data' }
+            headers: { 'Content-Type': 'multipart/form-data' },
+            //withCredentials: true
           });
         }
         message.value = 'Song saved successfully!';

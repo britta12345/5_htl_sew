@@ -25252,3 +25252,2203 @@ select u1_0.id,u1_0.password,u1_0.username from user u1_0 where u1_0.username=? 
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "select u1_0.id,u1_0.password,u1_0.username from [*]user u1_0 where u1_0.username=?"; erwartet "identifier"
 Syntax error in SQL statement "select u1_0.id,u1_0.password,u1_0.username from [*]user u1_0 where u1_0.username=?"; expected "identifier"; SQL statement:
 select u1_0.id,u1_0.password,u1_0.username from user u1_0 where u1_0.username=? [42001-224]
+2025-01-07 14:29:11.100453+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:29:11.231334+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:29:11.437224+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:29:11.451211+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:29:11.482179+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:29:11.502219+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:29:11.520493+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:29:11.539285+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:29:11.593812+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:29:11.612811+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:29:11.648816+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:29:11.679820+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:29:11.714381+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:29:11.751803+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:29:11.810745+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:29:11.833693+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:29:11.850604+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:29:11.865631+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:29:11.879882+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:29:11.914120+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:29:11.938118+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:29:11.952125+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 14:35:56.964728+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:35:59.917125+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:36:01.312253+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:36:01.924335+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:02.659224+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:36:03.187950+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:03.366829+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:36:03.834840+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:04.011203+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:36:04.302850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:36:04.667762+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:36:04.925123+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:36:05.133057+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:36:05.293284+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:05.500019+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:36:05.787951+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:05.962626+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:36:06.195343+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:36:06.341099+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:06.554275+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:36:06.666122+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:36:06.742561+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 14:36:50.623417+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:36:50.641532+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:36:50.653699+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:36:50.695247+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:50.706246+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:36:50.714247+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:50.725247+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:36:50.733252+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:50.740251+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:36:50.751283+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:36:50.758282+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:36:50.771290+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:36:50.777913+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:36:50.786900+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:50.794906+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:36:50.802869+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:36:50.809871+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:36:50.822870+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:36:50.830870+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:36:50.849872+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:36:50.859870+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:36:50.864914+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 14:37:59.775792+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:37:59.845025+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:37:59.916666+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:37:59.953378+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:38:00.006579+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:38:00.047547+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:38:00.100458+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:38:00.159409+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:38:00.218932+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:38:00.291791+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:38:00.350759+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:38:00.409953+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:38:00.476320+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:38:00.535536+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:38:00.596564+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:38:00.684843+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:38:00.732892+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:38:00.792661+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:38:00.870298+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:38:00.953459+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:38:01.007477+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:38:01.042065+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 14:42:15.429189+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:42:15.813543+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:42:16.469404+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:42:17.062684+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:42:17.746548+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:42:18.478679+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:42:19.171816+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:42:19.700472+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:42:20.412830+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:42:21.141399+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:42:22.625191+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:42:23.539105+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:42:24.591898+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:42:25.657360+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:42:26.666098+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:42:28.066430+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:42:29.093845+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:42:30.500532+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:42:31.383897+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:42:31.552429+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:42:31.606957+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:42:31.716477+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 14:48:31.750970+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 14:48:31.797174+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 14:48:31.824992+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 14:48:31.831439+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:48:31.843072+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 14:48:31.857711+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:48:31.866251+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 14:48:31.875252+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:48:31.881251+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 14:48:31.891594+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 14:48:31.899596+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 14:48:31.909198+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 14:48:31.922211+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 14:48:31.930202+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:48:31.940720+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 14:48:31.950719+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 14:48:31.957719+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 14:48:31.964721+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 14:48:31.980720+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 14:48:32.003723+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:48:32.012725+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 14:48:32.019725+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 15:00:04.521208+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 15:00:05.124919+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 15:00:05.383636+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 15:00:05.442212+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:00:05.525229+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 15:00:05.634808+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:00:05.764505+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 15:00:05.853066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:00:05.943632+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 15:00:05.995633+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 15:00:06.088198+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 15:00:06.172767+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 15:00:06.258323+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 15:00:06.380902+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:00:06.500472+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 15:00:06.614070+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:00:06.726689+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 15:00:06.833271+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 15:00:07.010969+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:00:07.161114+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:00:07.215222+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:00:07.380387+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 15:30:35.811238+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 15:30:35.934842+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 15:30:36.114066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 15:30:36.141396+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:30:36.253293+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 15:30:36.739993+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:30:37.339077+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 15:30:37.688848+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:30:37.974487+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 15:30:38.115585+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 15:30:38.558356+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 15:30:38.727143+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 15:30:38.794860+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 15:30:38.953490+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:30:39.365618+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 15:30:39.520727+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:30:39.602196+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 15:30:39.839150+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 15:30:39.950250+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:30:40.135948+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:30:40.705850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:30:40.789447+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 15:51:20.056907+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 15:51:20.241821+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 15:51:21.659178+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 15:51:22.379220+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:51:22.819631+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 15:51:22.910582+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:51:22.957919+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 15:51:23.127965+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:51:23.176850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 15:51:23.233572+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 15:51:23.320208+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 15:51:23.379183+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 15:51:23.427473+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 15:51:23.443563+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:51:23.473721+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 15:51:23.489350+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 15:51:23.526907+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 15:51:23.583904+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 15:51:23.632981+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 15:51:23.757304+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:51:23.805397+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 15:51:23.822785+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 17:35:01.344639+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 17:35:01.405932+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 17:35:01.473854+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 17:35:01.481005+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 17:35:01.488706+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 17:35:01.497768+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 17:35:01.497768+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 17:35:01.511775+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 17:35:01.511775+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 17:35:01.526783+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 17:35:01.541787+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 17:35:01.541787+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 17:35:01.556785+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 17:35:01.556785+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 17:35:01.575807+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 17:35:01.586820+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 17:35:01.601840+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 17:35:01.616832+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 17:35:01.616832+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 17:35:01.656398+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 17:35:01.669239+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 17:35:01.675883+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 18:03:49.630428+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 18:03:49.686282+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 18:03:49.715899+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 18:03:49.721544+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:03:49.730370+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 18:03:49.742271+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:03:49.792538+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 18:03:49.804525+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:03:49.843151+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 18:03:49.884429+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 18:03:49.893697+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 18:03:49.913643+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 18:03:49.925670+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 18:03:49.935767+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:03:49.963890+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 18:03:49.982710+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:03:49.995641+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 18:03:50.013875+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 18:03:50.036998+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:03:50.085867+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:03:50.151313+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:03:50.163364+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 18:36:56.203757+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 18:36:56.253538+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 18:36:56.363523+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 18:36:56.366075+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:36:56.374583+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 18:36:56.374583+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:36:56.395573+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 18:36:56.406113+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:36:56.406113+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 18:36:56.416595+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 18:36:56.422107+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 18:36:56.437866+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 18:36:56.437866+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 18:36:56.453374+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:36:56.454918+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 18:36:56.470946+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:36:56.478241+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 18:36:56.489931+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 18:36:56.493565+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:36:56.516230+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:36:56.518850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:36:56.527955+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 18:38:29.490954+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 18:38:29.496004+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 18:38:29.526662+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 18:38:29.534648+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:38:29.544033+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 18:38:29.558366+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:38:29.574004+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 18:38:29.574004+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:38:29.596032+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 18:38:29.621624+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 18:38:29.654985+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 18:38:29.669031+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 18:38:29.696123+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 18:38:29.701139+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:38:29.716815+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 18:38:29.748361+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:38:29.764002+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 18:38:29.779946+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 18:38:29.796066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:38:29.830066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:38:29.830066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:38:29.843110+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-07 18:42:15.958019+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-07 18:42:16.048114+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-07 18:42:16.096637+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-07 18:42:16.100647+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:42:16.116305+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-07 18:42:16.132324+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:42:16.147961+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-07 18:42:16.163621+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:42:16.163621+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-07 18:42:16.189660+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-07 18:42:16.210472+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-07 18:42:16.228063+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-07 18:42:16.242759+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-07 18:42:16.258797+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:42:16.290503+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-07 18:42:16.291842+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-07 18:42:16.355468+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-07 18:42:16.388414+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-07 18:42:16.403684+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-07 18:42:16.434397+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:42:16.448441+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-07 18:42:16.448441+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 11:41:22.446438+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 11:41:22.522251+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 11:41:22.743916+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 11:41:22.759950+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:41:22.784548+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 11:41:22.818229+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:41:22.841089+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 11:41:22.863486+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:41:22.909128+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 11:41:22.932387+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 11:41:22.955929+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 11:41:22.979000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 11:41:23.001111+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 11:41:23.020141+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:41:23.045417+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 11:41:23.077841+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:41:23.097950+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 11:41:23.122739+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 11:41:23.140870+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:41:23.186707+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:41:23.198236+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:41:23.216649+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 11:50:17.177319+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 11:50:17.244998+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 11:50:17.286606+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 11:50:17.294161+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:50:17.311231+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 11:50:17.322760+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:50:17.336284+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 11:50:17.354409+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:50:17.369370+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 11:50:17.384974+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 11:50:17.400457+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 11:50:17.416231+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 11:50:17.436411+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 11:50:17.454061+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:50:17.465588+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 11:50:17.479499+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:50:17.490695+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 11:50:17.501218+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 11:50:17.515738+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:50:17.539928+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:50:17.553463+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:50:17.562991+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 11:58:25.276809+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 11:58:25.314327+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 11:58:25.390589+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 11:58:25.396987+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:58:25.406507+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 11:58:25.455861+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:58:25.465036+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 11:58:25.480640+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:58:25.492331+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 11:58:25.499850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 11:58:25.513695+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 11:58:25.522496+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 11:58:25.532072+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 11:58:25.547696+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:58:25.559892+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 11:58:25.569387+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 11:58:25.582172+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 11:58:25.592052+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 11:58:25.604455+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 11:58:25.630461+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:58:25.643205+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 11:58:25.650735+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 12:04:26.314939+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 12:04:26.372324+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 12:04:26.476865+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 12:04:26.484395+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:04:26.499125+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 12:04:26.531232+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:04:26.561407+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 12:04:26.576655+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:04:26.598818+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 12:04:26.611441+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 12:04:26.622114+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 12:04:26.650137+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 12:04:26.676987+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 12:04:26.696634+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:04:26.711754+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 12:04:26.749943+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:04:26.770349+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 12:04:26.789122+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 12:04:26.802789+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:04:26.833970+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:04:26.845846+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:04:26.865650+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 12:56:28.729978+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 12:56:28.785958+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 12:56:29.010090+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 12:56:29.032868+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:56:29.184496+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 12:56:29.430362+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:56:29.445130+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 12:56:29.486571+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:56:29.503656+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 12:56:29.600191+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 12:56:29.745419+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 12:56:29.920642+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 12:56:30.096400+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 12:56:30.277804+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:56:30.362150+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 12:56:30.736008+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:56:30.817963+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 12:56:31.002029+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 12:56:31.137465+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:56:31.302638+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:56:31.360356+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:56:31.455359+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 12:58:21.779732+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 12:58:21.885243+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 12:58:22.365641+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 12:58:22.412341+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:58:22.492326+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 12:58:22.581897+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:58:22.659953+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 12:58:23.105514+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:58:23.203914+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 12:58:23.312112+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 12:58:23.391631+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 12:58:23.462245+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 12:58:23.538577+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 12:58:23.607825+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:58:23.677890+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 12:58:23.803876+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:58:23.898758+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 12:58:23.983273+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 12:58:24.050956+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:58:24.184961+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:58:24.257658+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:58:24.307847+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 12:59:44.576692+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 12:59:44.773092+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 12:59:45.055541+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 12:59:45.153797+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:59:45.236012+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 12:59:45.263252+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:59:45.268809+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 12:59:45.275365+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:59:45.282963+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 12:59:45.292637+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 12:59:45.301688+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 12:59:45.307687+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 12:59:45.317288+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 12:59:45.324989+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:59:45.333728+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 12:59:45.361495+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 12:59:45.424686+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 12:59:45.502754+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 12:59:45.556726+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 12:59:45.691679+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:59:45.769585+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 12:59:45.844063+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 13:03:45.751482+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 13:03:45.870357+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 13:03:46.202165+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 13:03:46.214712+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:03:46.228862+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 13:03:46.265403+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:03:46.286346+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 13:03:46.304865+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:03:46.360797+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 13:03:46.452111+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 13:03:46.527425+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 13:03:46.622182+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 13:03:46.751163+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 13:03:46.847527+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:03:46.914665+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 13:03:46.996743+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:03:47.065850+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 13:03:47.148990+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 13:03:47.267256+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:03:47.391537+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 13:03:47.473066+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 13:03:47.547232+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-13 13:32:51.238730+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-13 13:32:51.503824+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-13 13:32:51.769789+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-13 13:32:51.858532+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:32:51.951715+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-13 13:32:52.190930+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:32:52.223569+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-13 13:32:52.276112+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:32:52.313754+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-13 13:32:52.353686+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-13 13:32:52.420842+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-13 13:32:52.475322+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-13 13:32:52.545874+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-13 13:32:52.587250+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:32:52.613744+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-13 13:32:52.636644+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-13 13:32:52.673531+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-13 13:32:52.702851+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-13 13:32:52.736627+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-13 13:32:52.818447+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 13:32:52.869987+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-13 13:32:52.893432+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-14 08:07:26.658632+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-14 08:07:26.908035+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-14 08:07:27.060673+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-14 08:07:27.077971+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:07:27.145972+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-14 08:07:27.188844+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:07:27.234975+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-14 08:07:27.313512+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:07:27.346622+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-14 08:07:27.394647+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-14 08:07:27.446033+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-14 08:07:27.471641+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-14 08:07:27.534079+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-14 08:07:27.602831+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:07:27.631455+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-14 08:07:27.693724+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:07:27.732340+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-14 08:07:27.757754+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-14 08:07:27.820621+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:07:27.882670+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-14 08:07:27.924671+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-14 08:07:27.983604+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]
+2025-01-14 08:21:22.970835+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "drop table if exists [*]user cascade "; erwartet "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-224]
+2025-01-14 08:21:23.018409+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; erwartet "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2025-01-14 08:21:23.353595+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS artist ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS artist ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS artist ( [42001-224]
+2025-01-14 08:21:23.395341+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:21:23.444549+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]name VARCHAR(255) NOT NULL"
+Syntax error in SQL statement "[*]name VARCHAR(255) NOT NULL"; SQL statement:
+name VARCHAR(255) NOT NULL [42000-224]
+2025-01-14 08:21:23.506132+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:21:23.555951+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS song ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS song ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS song ( [42001-224]
+2025-01-14 08:21:23.872296+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:21:23.954416+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]title VARCHAR(255) NOT NULL,"; erwartet "TRUNCATE"
+Syntax error in SQL statement "[*]title VARCHAR(255) NOT NULL,"; expected "TRUNCATE"; SQL statement:
+title VARCHAR(255) NOT NULL, [42001-224]
+2025-01-14 08:21:24.092356+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]artist_id BIGINT NOT NULL,"; erwartet "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]artist_id BIGINT NOT NULL,"; expected "ALTER, ANALYZE"; SQL statement:
+artist_id BIGINT NOT NULL, [42001-224]
+2025-01-14 08:21:24.155875+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]genre VARCHAR(100),"; erwartet "GRANT"
+Syntax error in SQL statement "[*]genre VARCHAR(100),"; expected "GRANT"; SQL statement:
+genre VARCHAR(100), [42001-224]
+2025-01-14 08:21:24.236763+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]length INT,"
+Syntax error in SQL statement "[*]length INT,"; SQL statement:
+length INT, [42000-224]
+2025-01-14 08:21:24.319500+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"
+Syntax error in SQL statement "[*]FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE"; SQL statement:
+FOREIGN KEY (artist_id) REFERENCES artist(id) ON DELETE CASCADE [42000-224]
+2025-01-14 08:21:24.444995+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:21:24.538013+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "CREATE TABLE IF NOT EXISTS `user` ([*]"; erwartet "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS `user` ([*]"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS `user` ( [42001-224]
+2025-01-14 08:21:24.603033+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; erwartet "INSERT"
+Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY,"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY, [42001-224]
+2025-01-14 08:21:24.663735+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]username VARCHAR(255) NOT NULL UNIQUE,"; erwartet "UPDATE"
+Syntax error in SQL statement "[*]username VARCHAR(255) NOT NULL UNIQUE,"; expected "UPDATE"; SQL statement:
+username VARCHAR(255) NOT NULL UNIQUE, [42001-224]
+2025-01-14 08:21:24.728235+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*]password VARCHAR(255) NOT NULL"; erwartet "PREPARE"
+Syntax error in SQL statement "[*]password VARCHAR(255) NOT NULL"; expected "PREPARE"; SQL statement:
+password VARCHAR(255) NOT NULL [42001-224]
+2025-01-14 08:21:24.757956+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2025-01-14 08:21:24.852972+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-14 08:21:24.921631+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, username, password) [42102-224]
+2025-01-14 08:21:24.966583+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "USER" nicht gefunden
+Table "USER" not found; SQL statement:
+SELECT * FROM `user` [42102-224]

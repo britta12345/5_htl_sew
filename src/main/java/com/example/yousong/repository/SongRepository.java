@@ -28,6 +28,9 @@ public interface SongRepository extends JpaRepository<Song, Long> {
     // Optional: Suche basierend auf Titel mit Projektion
     //List<SongProjection> findProjectedByTitleContainingIgnoreCase(String title);
 
+    //------------
+    // Methoden definiert, die Projections zurückgebe
+
     // Suche nach Titel mit Projections
     List<SongProjection> findProjectedByTitleContainingIgnoreCase(String title);
 
@@ -36,8 +39,10 @@ public interface SongRepository extends JpaRepository<Song, Long> {
 
     // Kombination von Titel- und Künstlersuche (mit Projections)
     List<SongProjection> findProjectedByTitleContainingIgnoreCaseOrArtist_NameContainingIgnoreCase(
-            String title, String artistName);
+           String title, String artistName);
 
     // Paginierte Projektionen abrufen
     Page<SongProjection> findAllProjectedBy(Pageable pageable);
+
+    //--------
 }

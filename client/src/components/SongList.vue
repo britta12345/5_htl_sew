@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoggedIn">
+  <div> <!--v-if="isLoggedIn">-->
     <h1>Available Songs</h1>
     <input v-model="searchQuery" @input="searchSongs" placeholder="Search for songs by title or artist" />
 
@@ -31,10 +31,10 @@
     />
   </div>
 
-  <div v-else>
+  <!--<div v-else>
     <h1>Please log in to access the songs.</h1>
     <button @click="redirectToLogin">Go to Login</button>
-  </div>
+  </div>-->
 </template>
 
 <script>
@@ -56,31 +56,32 @@ export default {
       searchQuery: '',
       currentPage: 0,
       totalPages: 0,
-      isLoggedIn: false, // Login-Status für die Song-Liste
+      //isLoggedIn: false, // Login-Status für die Song-Liste
     };
   },
   mounted() {
-    this.checkLogin(); // Überprüfe den Login-Status beim Laden der Seite
+    //this.checkLogin(); // Überprüfe den Login-Status beim Laden der Seite
     this.fetchSongs(); // Hole Songs, wenn eingeloggt
   },
   methods: {
     // Überprüfen, ob der Benutzer eingeloggt ist
-    checkLogin() {
+    /*checkLogin() {
       const token = localStorage.getItem('authToken');
       this.isLoggedIn = true || !!token; // Wenn Token vorhanden, setze isLoggedIn auf true
-    },
+    },*/
 
     // Songs von der API abrufen
     async fetchSongs() {
-      if (!this.isLoggedIn) {
+      /*if (!this.isLoggedIn) {
         return; // Songs nur abrufen, wenn eingeloggt
-      }
+      }*/
 
       try {
-        const token = localStorage.getItem('authToken');
+        //const token = localStorage.getItem('authToken');
         const response = await axios.get(`http://localhost:8082/api/songs`, {
-          headers: { 'Authorization': `Bearer ${token}` },
-          params: { page: this.currentPage, size: 5 }
+          //headers: { 'Authorization': `Bearer ${token}` },
+          params: { page: this.currentPage, size: 5 },
+         // withCredentials: true
         });
 
         this.songs = response.data.content;
@@ -155,9 +156,9 @@ export default {
     },
 
     // Zur Login-Seite weiterleiten
-    redirectToLogin() {
+    /*redirectToLogin() {
       this.$router.push('/login');
-    }
+    }*/
   }
 };
 </script>

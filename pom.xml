@@ -35,10 +35,10 @@
     <dependencies>
         <!-- 10 -->
         <!-- Spring Security für Authentifizierung und Autorisierung -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- Spring Boot Web Starter -->
         <dependency>

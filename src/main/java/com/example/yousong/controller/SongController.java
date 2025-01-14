@@ -13,7 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.dao.OptimisticLockingFailureException;
 
@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController // Markiert Klasse als Controller für REST-APIs
-@CrossOrigin(origins = "*")  // Für Cross-Origin-Zugriffe
+@CrossOrigin(origins = "http://localhost:8080")  // Für Cross-Origin-Zugriffe
 public class SongController {
 
     private final SongRepository songRepository;
@@ -41,7 +41,7 @@ public class SongController {
 
     //----- 8 -------!!!!
         // Methode zum Hochladen eines Songs mit Audiodatei
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @PostMapping(value = "/api/songs/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Song> uploadSong( //konvertiert Datei in Base64 und speichert diese im Song-Objekt
             @RequestParam("title") String title,
@@ -79,7 +79,7 @@ public class SongController {
     }
 
     //Daten aus Repository mit Projection abrufen und an Client senden
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @GetMapping("/api/songs/projection")
     public ResponseEntity<Page<SongProjection>> getAllSongsProjection(
             @RequestParam(defaultValue = "0") int page,
@@ -90,7 +90,7 @@ public class SongController {
     }
 
 
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @GetMapping("/api/songs/{id}")
     public ResponseEntity<Song> getSongById(@PathVariable Long id) {
         return songRepository.findById(id)
@@ -102,7 +102,7 @@ public class SongController {
     }
 
     // Hinzufügen einer Methode, um nur Audiodaten zu erhalten
-    @GetMapping(value = "/api/songs/{id}/audio", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    @GetMapping("/api/songs/{id}/audio")
     public ResponseEntity<?> getSongAudio(@PathVariable Long id) {
         return songRepository.findById(id)
                 .map(song -> {
@@ -117,19 +117,34 @@ public class SongController {
     }
 
 
-    @GetMapping("/api/songs")
+    /*@GetMapping("/api/songs")
     public ResponseEntity<Page<SongProjection>> getAllSongs(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "5") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<SongProjection> songs = songRepository.findAllProjectedBy(pageable);
         return ResponseEntity.ok(songs);
+    }*/
+
+    @GetMapping("/api/songs")
+    public ResponseEntity<Page<SongProjection>> getAllSongs(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size) {
+        try {
+            Pageable pageable = PageRequest.of(page, size);
+            Page<SongProjection> songs = songRepository.findAllProjectedBy(pageable); //Projections
+            return ResponseEntity.ok(songs);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+        }
     }
 
 
     //----neue Songs erstellen----
     // CREATE
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @PostMapping("/api/songs")
     public ResponseEntity<Song> createSong(@Valid @RequestBody Song song) {
         if (song.getArtist() == null || song.getArtist().getId() == null) {
@@ -141,7 +156,7 @@ public class SongController {
 
     //----vorhandene Songs bearbeiten----
     // UPDATE --- Methode zum Aktualisieren eines Songs
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @PutMapping(value = "/api/songs/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> updateSong(
             @PathVariable Long id,
@@ -203,7 +218,7 @@ public class SongController {
 
     //----Löschen von Songs----
     // DELETE
-    @PreAuthorize("isAuthenticated()") //------- 9
+    //@PreAuthorize("isAuthenticated()") //------- 9
     @DeleteMapping("/api/songs/{id}")
     public ResponseEntity<Void> deleteSong(@PathVariable Long id) {
         if (songRepository.existsById(id)) {

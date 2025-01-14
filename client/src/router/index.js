@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import SongList from '../components/SongList.vue';
-import Login from '../components/LoginForm.vue';  // Angenommen, du hast eine Login-Komponente
+//import Login from '../components/LoginForm.vue';  // Angenommen, du hast eine Login-Komponente
 
 const routes = [
     {
@@ -9,11 +9,11 @@ const routes = [
         component: SongList,
         //meta: { requiresAuth: true }
     },
-    {
+    /*{
         path: '/login',
         name: 'login',
         component: Login
-    }
+    }*/
 ];
 
 const router = createRouter({
@@ -22,13 +22,13 @@ const router = createRouter({
 });
 
 // Authentifizierung-Guard
-router.beforeEach((to, from, next) => {
+/*router.beforeEach((to, from, next) => {
     const isLoggedIn = localStorage.getItem('authToken');
     if (to.meta.requiresAuth && !isLoggedIn) {
         next({ name: 'login' }); // Wenn nicht eingeloggt, zur Login-Seite weiterleiten
     } else {
         next();
     }
-});
+});*/
 
 export default router;

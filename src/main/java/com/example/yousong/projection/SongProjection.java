@@ -4,7 +4,7 @@ package com.example.yousong.projection;
 public interface SongProjection {
     Long getId();
     String getTitle();
-    String getGenre();
+    String getGenres();
     int getLength();
 
     interface ArtistInfo {

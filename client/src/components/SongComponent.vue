@@ -2,7 +2,10 @@
   <div class="song">
     <h3>{{ song.title }}</h3>
     <p>Artist: {{ song.artist ? song.artist.name : 'Unknown' }}</p>
-    <p>Genre: {{ song.genre }}</p>
+    <p>
+      Genres:
+      <span v-for="genre in song.genres" :key="genre">{{ genre }}, </span>
+    </p>
     <p>Length: {{ song.length }} seconds</p>
 
     <!-- Audio-Komponente, die auf den geladenen Audio-Blob zugreift -->

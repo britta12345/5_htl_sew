@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.List;
 
 @Entity
 public class Song {
@@ -22,25 +23,16 @@ public class Song {
     @NotNull(message = "Artist is required")
     private Artist artist;
 
-    @NotBlank(message = "Genre cannot be blank")
-    private String genre;
-
     @Min(value = 1, message = "Length must be at least 1 second")
     private int length;
 
-    //------ 9 ------
+    @ElementCollection
+    private List<String> genres;  // Hinzugefügt: Liste von Genres
+
+    //------ 9 Concurrent Updates ------
     //automatisch von Spring Data JPA verwaltet und verwendet, um Versionskonflikte zu erkennen
     @Version
     private Integer version;
-
-    // Getter und Setter
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
 
     //----- 8 -------
     @Lob
@@ -48,13 +40,13 @@ public class Song {
 
     public Song() {}
 
-    //----- 8 anpassen -------
-    public Song(String title, Artist artist, String genre, int length, String audioData) {
+    //----- 11 anpassen -------
+    public Song(String title, Artist artist, int length, String audioData, List<String> genres) {
         this.title = title;
         this.artist = artist;
-        this.genre = genre;
         this.length = length;
         this.audioData = audioData;
+        this.genres = genres; //--neu
     }
 
     //----- 8 ------- Musikdaten werden in der Datenbank gespeichert
@@ -90,19 +82,27 @@ public class Song {
         this.artist = artist;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
     public int getLength() {
         return length;
     }
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public List<String> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<String> genres) {
+        this.genres = genres;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }

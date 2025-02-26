@@ -35,11 +35,6 @@
     <dependencies>
         <!-- 10 -->
         <!-- Spring Security für Authentifizierung und Autorisierung -->
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
-
         <!-- Spring Boot Web Starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

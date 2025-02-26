@@ -1,6 +1,5 @@
 <template>
-  <!-- 7 ------ Validierung auf der Client-Seitee ----->
-
+  <!-- 7 ------ Validierung auf der Client-Seite ----->
   <div>
     <!-- Song Editor Form -->
     <h2>{{ isEdit ? 'Edit Song' : 'Create a New Song' }}</h2>
@@ -21,8 +20,13 @@
       <span v-if="v$.localSong.artistId.$invalid" class="error-message">Du musst einen Artist auswählen!</span>
 
       <!-- Genre Eingabe -->
-      <input v-model="localSong.genre" placeholder="Genre" required />
-      <span v-if="!v$.localSong.genre.$pending && v$.localSong.genre.$invalid" class="error-message">Du brauchst ein Genre!</span>
+      <!-- <input v-model="localSong.genre" placeholder="Genre" required />  ENTFERNT -->
+      <!-- <span v-if="!v$.localSong.genre.$pending && v$.localSong.genre.$invalid" class="error-message">Du brauchst ein Genre!</span> -->
+
+      <label for="genres">Genres:</label>
+      <select id="genres" v-model="localSong.genres" multiple>
+        <option v-for="genre in availableGenres" :key="genre" :value="genre">{{ genre }}</option>
+      </select>
 
       <!-- Länge Eingabe -->
       <input v-model="localSong.length" placeholder="Length" type="number" required />
@@ -79,44 +83,49 @@
   </div>
 </template>
 
-
 <script>
 import axios from 'axios';
 import { required, minLength } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 import { ref, onMounted } from 'vue';
-//import { ref, onMounted, watch } from 'vue';
 
 export default {
   props: {
     song: {
       type: Object,
-      default: () => ({ title: '', artistId: '', genre: '', length: 0 }),
-      audioFile: null, // ---8 --- Neue Variable für die Audiodatei ---
-      message: ''
+      default: () => ({
+        title: '',
+        artistId: '',
+        genres: [],
+        length: 0,
+        audioFile: null,
+        version: null, // ----9---- Neue Eigenschaft für die Version
+      }),
     },
     isEdit: Boolean
   },
   setup(props, { emit }) {
-    const localSong = ref({ ...props.song, artistId: props.song.artistId || '' });
+    const localSong = ref({ ...props.song, artistId: props.song.artistId || '', genres: props.song.genres || [] }); //GENRES HINZUGEFÜGT
     const newArtistName = ref('');
     const artists = ref([]);
     const editedArtistId = ref(null);
     const editedArtistName = ref('');
     const message = ref('');
     const artistMessage = ref('');
+    // ----------- NEU: availableGenres als ref definieren -----------
+    const availableGenres = ref(['Rock', 'Pop', 'Hip Hop', 'Electronic', 'Classical', 'Jazz', 'Country', 'Blues', 'Metal', 'Folk']); // Beispiel-Liste
+    // -------------------------------------------------------------
     // Validierung für artistId hinzufügen
     const v$ = useVuelidate(
         {
-      localSong: {
-        title: { required },
-        genre: { required },
-        length: { required, min: minLength(1) },
-        artistId: { required }
-      },
-      newArtistName: { required, minLength: minLength(1) },
+          localSong: {
+            title: { required },
+            length: { required, min: minLength(1) },
+            artistId: { required }
+          },
+          newArtistName: { required, minLength: minLength(1) },
 
-    },
+        },
         {
           localSong,
           newArtistName
@@ -166,31 +175,51 @@ export default {
       const formData = new FormData();
       formData.append('title', localSong.value.title);
       formData.append('artistId', localSong.value.artistId);
-      formData.append('genre', localSong.value.genre);
       formData.append('length', localSong.value.length);
+
+      // Genres als Array an den Server senden
+      localSong.value.genres.forEach(genre => {
+        formData.append('genres', genre);
+      });
 
       // Nur wenn ein neues Audio-File hochgeladen wird, wird es gesendet
       if (localSong.value.audioFile) {
         formData.append('audioFile', localSong.value.audioFile);
       }
 
+      //------ 9 Concurrent Updates ------
+      //Version hinzufügen
+      //aktuelle Version von localSong als version Parameter an Backend sendet
+      formData.append('version', localSong.value.version);
+
       try {
+        //let response;
         if (props.isEdit) {
+          console.log(localSong)
           await axios.put(`http://localhost:8082/api/songs/${localSong.value.id}`, formData, {
-            headers: { 'Content-Type': 'multipart/form-data' },
-            //withCredentials: true
+            headers: { 'Content-Type': 'multipart/form-data' }
           });
         } else {
-          await axios.post('http://localhost:8082/api/songs/upload', formData, {
-            headers: { 'Content-Type': 'multipart/form-data' },
-            //withCredentials: true
+          /*response =*/ await  await axios.post('http://localhost:8082/api/songs/upload', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
           });
         }
         message.value = 'Song saved successfully!';
         emit('refreshSongs');
         emit('closeEditor');
       } catch (error) {
-        message.value = 'Error saving song: ' + error.message;
+        //------ 9 Concurrent Updates ------
+        // **WICHTIG:** Fehlerbehandlung für Version Mismatch
+        // wenn Server einen 409 Conflict zurückgibt -> Fehlermeldung
+        // (error.response.data), loadSong() wird aufgerufen um neueste Song-Daten vom Server zu holen
+        if (error.response && error.response.status === 409) {
+          message.value = error.response.data; // Zeige die Fehlermeldung vom Server an
+          // holt neuesten Song-Daten vom Server + aktualisiert localSong
+          // wird aufgerufen wenn Versionskonflikt auftrittt
+          loadSong(); // Funktion zum Neuladen der Song-Daten
+        } else {
+          message.value = 'Error saving song: ' + error.message;
+        }
       }
     };
 
@@ -208,6 +237,7 @@ export default {
         editedArtistId.value = null;
         editedArtistName.value = '';
         await fetchArtists();
+        localSong.value.artistId = response.data.id;
       } catch (error) {
         artistMessage.value = 'Error updating artist.';
         console.error('Error updating artist:', error);
@@ -230,6 +260,20 @@ export default {
       }
     };
 
+    //------ 9 Concurrent Updates ------
+    //Funktion zum Laden des Songs (für Version Mismatch) -----
+    const loadSong = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8082/api/songs/${localSong.value.id}`);
+        // Aktualisiere localSong mit den neuen Daten, einschließlich der Version
+        localSong.value = { ...response.data, artistId: response.data.artist.id }; // Stelle sicher, dass artistId korrekt gesetzt wird
+      } catch (error) {
+        message.value = 'Error loading song: ' + error.message;
+        console.error('Error loading song:', error);
+      }
+    };
+    // ---------------------------------------------------------------------
+
     onMounted(fetchArtists);
 
     return {
@@ -247,9 +291,10 @@ export default {
       saveArtistEdit,
       cancelEdit,
       deleteArtist,
-      handleFileUpload //--------8 --------
+      handleFileUpload, //--------8 -------- Datei-Upload
+      availableGenres, // ----------- NEU: availableGenres zurückgeben -----------
+      loadSong // ----- NEU: loadSong Funktion zurückgeben -----
     };
   }
 };
 </script>
-
